@@ -1,14 +1,18 @@
-import React from 'react'
+import React from "react"
 import { Outlet } from "react-router-dom"
-import Header from './Header'
+import Header from "./Header"
+import Footer from "./Footer"
 
 // This helps to share the UI as we have nested multiple routes.
 
-export default function Layout(){
+export default function Layout() {
     return (
-        <>
-        <Header/>
-        <Outlet/>
-        </>
+        <div className="site-wrapper">
+            <Header />
+            <main>
+                <Outlet />
+            </main>
+            <Footer />
+        </div>
     )
 }

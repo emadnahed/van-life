@@ -31,12 +31,11 @@ function App() {
           {/* Nested routes with the shared UI being contained in the Layout component of the Host known as HostLayout, in this way we're able to prevent the repetition of the UI efforts in the remaining pages of the host*/}
 
           {/* indexing of a child route with no path  ensures that the route lands on it when the parent is accessed */}
-          <Route path="host" element= {<HostLayout />}>
+          <Route path="host" element={<HostLayout />}>
             <Route index element={<Dashboard />} />
             <Route path="income" element={<Income />} />
             <Route path="reviews" element={<Reviews />} />
           </Route>
-        
         </Route>
       </Routes>
     </BrowserRouter>
@@ -44,5 +43,3 @@ function App() {
 }
 
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);
-
-
