@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 
 export default function VanDetail() {
     // storing an id where the customer has routed. 
@@ -17,6 +17,13 @@ export default function VanDetail() {
     // Rendering conditionally if the  data is loaded or not. If it's null then render a loading message else display the information    
     return (
         <div className="van-detail-container">
+            
+            <Link
+                to=".."
+                relative="path"
+                className="back-button"
+            >&larr; <span>Back to all vans</span></Link>
+            
             {van ? (
                 <div className="van-detail">
                     <img src={van.imageUrl} />

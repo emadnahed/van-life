@@ -8,7 +8,6 @@ Nested routes are used when there is a common user interface utilized across mul
 
 A "Layout Route" serves as the parent route for routes nested within, ensuring the preferred portion of the user interface that will be shared. It utilizes an Outlet component.
 
-
 ### What does the `<Outlet/>` component do? When do you use it?
 
 The Outlet component ensures that the routes nested within a parent (with layout) are rendered as children.
@@ -18,3 +17,7 @@ The Outlet component ensures that the routes nested within a parent (with layout
 ### What is an "Index Route"?
 
 An "Index Route" is a pathless route indexed to serve as the default landing page upon routing to the parent route. The element will be rendered as the outlet child prop in the layout.
+
+## What is "`useSearchParams()`"?
+
+React Router DOM provides a hook called `useSearchParams()` which allows you to access and manipulate these query parameters from within your components.
