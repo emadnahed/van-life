@@ -11,6 +11,8 @@ export default function HostLayout() {
     color: "#161616",
   };
 
+  // The paths were changed from the absolute to relative.
+
   return (
     <>
       <nav className="host-nav">
