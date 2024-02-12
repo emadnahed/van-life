@@ -93,9 +93,17 @@ footer {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 350px;
+  min-height: 500px;
   color: white;
   padding: 45px 23px;
+  
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .home-container h1 {
@@ -114,8 +122,8 @@ footer {
   text-decoration: none;
   background-color: #ff8c38;
   border: none;
-  width: 100%;
-  margin-top: 27px;
+  width: 70%;
+  margin-top: 27px;  
   padding-block: 0.75rem;
   color: white;
   font-weight: 700;
@@ -130,7 +138,8 @@ footer {
 
 /*** ABOUT PAGE ***/
 .about-hero-image {
-  max-width: 100%;
+  max-width: 80%;
+  margin-left: 24px;
 }
 
 .about-page-content {
