@@ -461,3 +461,19 @@ i[class*="van-type-"] {
     height: 100px;
     border-radius: 5px;
 }
+
+
+.not-found-container {
+  padding-inline: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 52px;
+}
+
+.not-found-container .link-button {
+  width: 60%;
+  background-color: #161616;
+  color: white;
+}
