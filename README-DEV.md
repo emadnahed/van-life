@@ -21,3 +21,11 @@ An "Index Route" is a pathless route indexed to serve as the default landing pag
 ## What is "`useSearchParams()`"?
 
 React Router DOM provides a hook called `useSearchParams()` which allows you to access and manipulate these query parameters from within your components.
+
+## How to add the search filter(SearchParams) in the UI?
+
+This as a feature can be added to the application using useSearchParams and then filtering the raw array to later map for the content to be displayed.
+
+## How to get back to the filtered page when wishing to return from one of it's iterated item(if clicked) ?
+
+Pass the state of the searchparams to the link component of react router dom, use the useLocation hook in the recipient component where you wish the user to be instructed to return to the link with search params.

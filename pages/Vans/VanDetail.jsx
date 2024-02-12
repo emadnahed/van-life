@@ -1,10 +1,13 @@
 import React, { useEffect } from "react"
-import { useParams, Link } from "react-router-dom"
+import { useParams, Link, useLocation } from "react-router-dom"
 
 export default function VanDetail() {
     // storing an id where the customer has routed. 
     const params = useParams()
     const [van, setVan] = React.useState(null)
+    const location = useLocation()
+
+    console.log(location.state)
 
     // Fetch request to get van details when the component mounts
     useEffect(() => {
@@ -15,14 +18,21 @@ export default function VanDetail() {
     
     
     // Rendering conditionally if the  data is loaded or not. If it's null then render a loading message else display the information    
+
+
+    
+    const search = location.state?.search || ""
+
+    const type = location.state?.type || ""
+
     return (
         <div className="van-detail-container">
             
             <Link
-                to=".."
+                to={`..${search}`}
                 relative="path"
                 className="back-button"
-            >&larr; <span>Back to all vans</span></Link>
+            >&larr; <span>Back to {type || "all"} vans</span></Link>
             
             {van ? (
                 <div className="van-detail">
