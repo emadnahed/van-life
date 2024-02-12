@@ -28,7 +28,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/vans" element={<Vans />} />
           <Route path="/vans/:id" element={<VanDetail />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path={'*'} element={<NotFound />} />
 
           {/* Nested without UI sharing
           <Route path="vans">
