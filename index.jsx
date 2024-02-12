@@ -18,23 +18,21 @@ import HostVanPricing from "./pages/Host/HostVanPricing";
 import HostVanPhotos from "./pages/Host/HostVanPhotos";
 import NotFound from "./pages/NotFound";
 
-
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Layout />}>
+        <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/vans" element={<Vans />} />
           <Route path="/vans/:id" element={<VanDetail />} />
-          <Route path={'*'} element={<NotFound />} />
 
           {/* Nested without UI sharing
           <Route path="vans">
-            <Route index element={<Vans />} />
-            <Route path=":id" element={<VanDetail />} />
-          </Route> */}
+          <Route index element={<Vans />} />
+          <Route path=":id" element={<VanDetail />} />
+        </Route> */}
 
           {/* Nested routes with the shared UI being contained in the Layout component of the Host known as HostLayout, in this way we're able to prevent the repetition of the UI efforts in the remaining pages of the host*/}
 
@@ -43,14 +41,15 @@ function App() {
             <Route index element={<Dashboard />} />
             <Route path="income" element={<Income />} />
             <Route path="reviews" element={<Reviews />} />
-            <Route path="vans" element={<HostVans />} />            
-            
-            <Route path="vans/:id" element={<HostVanDetail />} >
+            <Route path="vans" element={<HostVans />} />
+
+            <Route path="vans/:id" element={<HostVanDetail />}>
               <Route index element={<HostVanInfo />} />
               <Route path="pricing" element={<HostVanPricing />} />
               <Route path="photos" element={<HostVanPhotos />} />
             </Route>
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
