@@ -1,8 +1,10 @@
 import React from "react"
-import { useParams, Link, NavLink, Outlet } from "react-router-dom"
+import { useParams, Link, NavLink, Outlet, useLocation } from "react-router-dom"
 
 export default function HostVanDetail() {
     const { id } = useParams()
+    const { pathname} = useLocation()
+    
     const [currentVan, setCurrentVan] = React.useState(null)
 
     React.useEffect(() => {
@@ -22,10 +24,15 @@ export default function HostVanDetail() {
         color: "#161616"
     }
 
+    
+    const returnPath = isNaN(pathname.slice(-1,)) ? "/host/vans" : ".."
+
+    console.log(returnPath)
+
     return (
         <section>
              <Link
-                to=".."
+                to={returnPath}
                 relative="path"
                 className="back-button"
             >&larr; <span>Back to all vans</span></Link>
